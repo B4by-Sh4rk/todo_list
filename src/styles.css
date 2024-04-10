@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    list-style: none;
+}
+
+.container {
+    background: #afa1a1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    padding-top: 10vh;
+    justify-content: flex-start;
+}
+
+form {
+    margin: 1em 0;
+}
+form>input.input {
+    width: calc(47em - 1em);
+    background: whitesmoke;
+    border-radius: 2em;
+    padding: 0.5em;
+    outline: none;
+    font-weight: bold;
+}
+ul {
+    width: calc(36em - 2em);
+    padding: 1em;
+    border: black 1px solid;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+ul.no_tasks {
+    display: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 1em 0;
+}
+ul >li:first-of-type{
+    margin-top: 0;
+}
+ul > li:last-of-type{
+    margin-bottom: 0;
+}
+li.todo-item.completed{
+    text-decoration: line-through;
+    color: brown;
+}
+
+.checkbox-container {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    height: 1.6em;
+    width: 3.5em;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkbox-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: #fff;
+    border: 0.2em solid #ccc;
+    border-radius: 50%;
+}
+  
+  .checkbox-custom::after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-container input[type="checkbox"]:checked + .checkbox-custom::after {
+    display: block;
+  }
+  
+  .checkbox-custom::after {
+    left: 0.24em;
+    top: 0.24em;
+    width: 1em;
+    height: 1em;
+    background: brown;
+    border-radius: 50%;
+}
+  svg {
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    max-width: 23em;
+}
